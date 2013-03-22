@@ -37,7 +37,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.1)
-    daemon (1.1.0)
+    daemons (1.1.9)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -111,7 +111,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  daemon
+  daemons
   jquery-rails
   lazy_high_charts
   rails (= 3.2.12)
