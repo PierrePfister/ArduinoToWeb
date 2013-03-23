@@ -1,4 +1,4 @@
 <h1>Frog Colony beta</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
 
-<%= link_to "Start the Arduino reader daemon", arduinoDaemon_path %>
+<%= link_to "Start the Arduino reader daemon", start_daemon_path %>

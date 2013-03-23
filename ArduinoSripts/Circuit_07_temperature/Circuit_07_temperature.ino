@@ -122,7 +122,8 @@ void loop()
   // Serial.print(voltage);
   // Serial.print("  deg C: ");
   Serial.print(degreesC);
-  Serial.print(","); // Each value is separated by a comma
+  // Each value is separated by a coma
+  Serial.print(","); 
   //Serial.print("  deg F: ");
   //Serial.println(degreesF);
 
