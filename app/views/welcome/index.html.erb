@@ -4,3 +4,10 @@
 <p>I am using a thread in order to read the data</p>
 
 <%= high_chart("my_id4", @chart) %>
+
+<h1> Listing of the temperatures in the Temperature Active Records </h1>
+<% @temperatures.each do |t| %>
+	<tr>
+			<td><%= temperatures.sensorTemp %></td>
+	</tr>
+<% end %>
