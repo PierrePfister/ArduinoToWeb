@@ -6,8 +6,7 @@
 <%= high_chart("my_id4", @chart) %>
 
 <h1> Listing of the temperatures in the Temperature Active Records </h1>
+
 <% @temperatures.each do |t| %>
-	<tr>
-			<td><%= temperatures.sensorTemp %></td>
-	</tr>
+			<h2><%= t.sensorTemp %></h2>
 <% end %>

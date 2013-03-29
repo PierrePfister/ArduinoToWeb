@@ -137,7 +137,7 @@ void loop()
   // character at the end of whatever it prints, moving down
   // to the NEXT line.
    
-  delay(1000); // repeat once per second (change as you wish!)
+  delay(5000); // repeat each 5 seconds 
 }
 
 
