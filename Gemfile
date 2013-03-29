@@ -6,9 +6,6 @@ source 'https://rubygems.org'
 # nice gem to do fancy graphs
 gem 'lazy_high_charts'
 
-# added by PP 22/3 
-# daemon is needed to have a daemon that reads the Arduino
-gem 'daemons'
 
 gem 'rails', '3.2.12'
 
