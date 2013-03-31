@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 require 'lazy_high_charts'
 
+
+
 class WelcomeController < ApplicationController
 
   def index
 
-                
                 
     # The code for the thread which would handle the reading of the Arduino
     # serial and store it to the db
@@ -57,15 +58,19 @@ class WelcomeController < ApplicationController
        f.options[:xAxis][:categories] = ['h11','h12','h13',]
        f.labels(:items=>[:html=>"in Celsius", :style=>{:left=>"40px", :top=>"8px", :color=>"black"} ])      
        f.series(:type=> 'column',:name=> 'living room',:data=> [3,2,1,3,4,2,3,7,9,10,1,23,3,34,27,30,34,23,23,24,25,23,23,23,24,2,2])
-             end
+    end
     
     respond_to do |format|
        format.html # index.html.erb
        format.json { render json: @temperatures }
      end
-   
-   
-  end
+  
+   end #index
 
-end
+   session[:test] = "PP is the best"
+  puts "------------------------------------------- #{session[:test]}"
+
+   
+
+end # WelcomeController class
 
