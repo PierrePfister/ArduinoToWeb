@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'debugger'
 
 # added by PP 22/3
 # nice gem to do fancy graphs

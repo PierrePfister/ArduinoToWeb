@@ -44,13 +44,19 @@ class WelcomeController < ApplicationController
         else
           temperatureString << char # append the cha just read to the temperature string
         end #if
+        logger.info ("#{temperatureString}")
       end #loop
       
     } # lambda
 
    # Launch a thread to perform the reading of the Arduino board 
    # The thread will be killed when the main process will be killed
-   readThread = Thread.new &readAndStore
+   debugger
+   if (@serverRestarted) 
+     readThread = Thread.new &readAndStore
+     @serverRestarted = nil
+   end
+   
    @temperatures = Temperature.all
 
    @chart = LazyHighCharts::HighChart.new('graph') do |f|
@@ -64,11 +70,10 @@ class WelcomeController < ApplicationController
        format.html # index.html.erb
        format.json { render json: @temperatures }
      end
+     
   
    end #index
 
-   session[:test] = "PP is the best"
-  puts "------------------------------------------- #{session[:test]}"
 
    
 
