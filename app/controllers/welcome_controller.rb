@@ -11,14 +11,15 @@ class WelcomeController < ApplicationController
     labelTab = []
     Temperature.find_each do |t| 
       temperatureTab << t.sensorTemp 
-      labelTab << t.created_at
+      labelTab << t.created_at.min.to_s
     end
 
     @chart = LazyHighCharts::HighChart.new('graph') do |f|
        f.title({ :text=>"Temperature sensed by the Arduino Board today"})
        f.options[:xAxis][:categories] = labelTab
        f.labels(:items=>[:html=>"in Celsius", :style=>{:left=>"40px", :top=>"8px", :color=>"black"} ])      
-       f.series(:type=> 'column',:name=> 'living room',:data=> temperatureTab)
+  #     f.series(:type=> 'column',:name=> 'living room',:data=> temperatureTab)
+      f.series(:type=> 'line',:name=> 'living room',:data=> temperatureTab)
     end
     
     respond_to do |format|
